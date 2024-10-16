@@ -17,13 +17,13 @@ class _MainScreenDemoState extends State<MainScreenDemo> {
           Container(
             height: screenHeight,
             width: screenWidth,
-            decoration: BoxDecoration(gradient: LinearGradient(
+            decoration: const BoxDecoration(gradient: LinearGradient(
               colors:[Color(0xffFF5E5E),Color(0xffFF0000)],
               begin:Alignment.bottomLeft,
               end: Alignment.topRight
               )
             ),
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: const Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Hi User",style:TextStyle(color: Colors.white,fontSize: 10),),
               CircleAvatar(backgroundColor: Colors.blue,),

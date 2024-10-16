@@ -25,18 +25,18 @@ class _CustomCardState extends State<CustomCardWithGestureDetector> {
                     color: Colors.black.withOpacity(0.3),
                     spreadRadius: 3,
                     blurRadius: 10,
-                    offset: Offset(0, 4), // Gölgenin konumu
+                    offset: const Offset(0, 4), // Gölgenin konumu
                   ),]
         ),
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(child: Icon(Icons.alarm,)),
-            Text("Pomodoro Timer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
+            Container(child: const Icon(Icons.alarm,)),
+            const Text("Pomodoro Timer",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
             Padding(
               padding: const EdgeInsets.only(top: 20.0),
               child: Row(
                 children: [
-                  Text(widget.text,style: TextStyle(color: Colors.black,fontSize: 15),),
+                  Text(widget.text,style: const TextStyle(color: Colors.black,fontSize: 15),),
                 ],
               ),
             ),

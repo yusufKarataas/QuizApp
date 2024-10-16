@@ -28,7 +28,7 @@ class _NavbarState extends State<Navbar> {
                       color: Colors.black.withOpacity(0.3),
                       spreadRadius: 2,
                       blurRadius: 10,
-                      offset: Offset(0, 4), // Gölgenin konumu
+                      offset: const Offset(0, 4), // Gölgenin konumu
                     ),]
         ),
         child: Padding(
@@ -36,9 +36,9 @@ class _NavbarState extends State<Navbar> {
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
           
-              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));},child: Icon(Icons.home)),
-              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) =>Stats()));},child: Icon(Icons.graphic_eq_sharp)),
-              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));},child: Icon(Icons.settings)),
+              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const MainScreen()));},child: const Icon(Icons.home)),
+              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) =>const Stats()));},child: const Icon(Icons.graphic_eq_sharp)),
+              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const Settings()));},child: const Icon(Icons.settings)),
             ],
           ),
         ),

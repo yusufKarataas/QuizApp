@@ -21,6 +21,19 @@ class _FlutterScreenState extends State<FlutterScreenDemo> {
   bool isFinished = false;
   int questionCount = 0;
 
+  void finishQuiz() {
+  Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => FinishPage(
+      trueScore: trueScore,
+      falseScore: falseScore,
+    ),
+  ),
+);
+
+  }
+
   void checkTrue(String option) {
     setState(() {
       selectedOption = option;
@@ -51,8 +64,7 @@ class _FlutterScreenState extends State<FlutterScreenDemo> {
       } else {
         isFinished = true;
         if (isFinished) {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const FinishPage()));
+          finishQuiz();
         }
       }
     });
@@ -137,7 +149,7 @@ class _FlutterScreenState extends State<FlutterScreenDemo> {
   }
 
   Widget buildOptionButton(double screenWidth, String option) {
-    return Container(
+    return SizedBox(
       width: screenWidth * 0.9, // Ekran genişliğinin %90'ı kadar genişlik
       height: 60,
       child: ElevatedButton(

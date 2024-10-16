@@ -22,7 +22,7 @@ class _MainScreenDemoState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: const Color(0xffF4F4F4),
       body: Column(
-        children: [
+        children:[
           Container(
             height: screenHeight,
             width: screenWidth,
@@ -34,7 +34,7 @@ class _MainScreenDemoState extends State<MainScreen> {
                 
               ),
               gradient:const LinearGradient(
-                colors: [const Color(0xffFF5E5E), const Color.fromARGB(255, 253, 72, 72)],
+                colors: [ Color(0xffFF5E5E), Color.fromARGB(255, 253, 72, 72)],
                 begin: Alignment.bottomLeft,
                 end: Alignment.topRight,
               ),
@@ -45,17 +45,17 @@ class _MainScreenDemoState extends State<MainScreen> {
                     offset: const Offset(0, 4), // Gölgenin konumu
                   ),]
             ),
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 Container(
+                 SizedBox(
                    width: 70,
                    height: 70,
-                   child: const CircleAvatar(
+                   child: CircleAvatar(
                      backgroundColor: Colors.white,
                    ),
                  ),
-                const Padding(
+                 Padding(
                   padding:  EdgeInsets.only(top:20.0),
                   child: Text(
                     "Hi $userName!",
@@ -71,7 +71,7 @@ class _MainScreenDemoState extends State<MainScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomCard(text: ""),
+                const CustomCard(text: ""),
                 const SizedBox(width: 15),
                 CustomCardWithGestureDetector(
                   text: "",
@@ -85,8 +85,8 @@ class _MainScreenDemoState extends State<MainScreen> {
               ],
             ),
           ),
-          Questionplace(),
-          Navbar(),
+          const Questionplace(),
+          const Navbar(),
         ],
       ),
     );

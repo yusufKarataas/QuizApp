@@ -34,7 +34,7 @@ class _FlutterQuizScreenState extends State<FlutterQuizScreen> {
       }
 
       // Sonraki soruya geç
-      Future.delayed(Duration(seconds: 1), () {
+      Future.delayed(const Duration(seconds: 1), () {
         setState(() {
           questionNumber++;
           resetButtonColors();
@@ -62,9 +62,9 @@ class _FlutterQuizScreenState extends State<FlutterQuizScreen> {
           Container(
             width: bluethingWidth,
             height: bluethingHeight,
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 79, 146, 255),
-              borderRadius: const BorderRadius.only(
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 79, 146, 255),
+              borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(50),
                 bottomRight: Radius.circular(50),
               ),
@@ -87,7 +87,7 @@ class _FlutterQuizScreenState extends State<FlutterQuizScreen> {
                     child: Center(
                       child: Text(
                         "${questionNumber + 1}/8",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
                         ),
@@ -113,14 +113,14 @@ class _FlutterQuizScreenState extends State<FlutterQuizScreen> {
                     color: Colors.black.withOpacity(0.1),
                     spreadRadius: 5,
                     blurRadius: 10,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   ),
                 ],
               ),
               child: Center(
                 child: Text(
                   questions[questionNumber].question,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -136,19 +136,19 @@ class _FlutterQuizScreenState extends State<FlutterQuizScreen> {
                   ontap: () => checkAnswer(questions[questionNumber].option1),
                   color: buttonColor1,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Custombutton(
                   text: questions[questionNumber].option2,
                   ontap: () => checkAnswer(questions[questionNumber].option2),
                   color: buttonColor2,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Custombutton(
                   text: questions[questionNumber].option3,
                   ontap: () => checkAnswer(questions[questionNumber].option3),
                   color: buttonColor3,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Custombutton(
                   text: questions[questionNumber].option4,
                   ontap: () => checkAnswer(questions[questionNumber].option4),
